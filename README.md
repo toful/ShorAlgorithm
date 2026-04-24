@@ -1,5 +1,7 @@
 # Shor’s Algorithm with Qiskit
 
+[![License](https://img.shields.io/github/license/toful/ShorAlgorithm?style=plastic)](https://github.com/toful/ShorAlgorithm)
+
 This project demonstrates **Shor’s algorithm** for integer factorization using Qiskit.
 
 This repository provides an educational implementation of Shor’s algorithm using Qiskit, designed to illustrate the quantum period‑finding subroutine for integer factorization.
@@ -13,15 +15,19 @@ You can also run the algorithm in IBM Quantum Platform, but it crashes with N > 
 
 * 1-Prepare a superposition over the counting register
 * 2-Apply controlled modular exponentiation:
-	
+
+```	
 	∣y⟩ → ∣ a^x⋅y  mod N ⟩
+```
 
 * 3-Apply the inverse Quantum Fourier Transform
 * 4-Measure the counting register
 * 5-Use classical continued fractions to infer the period r
 * 6-Compute factors via:
 
+```
 	gcd⁡(a^(r/2) ± 1, N)
+```
 
 ### Limitations & Assumptions
 
@@ -32,7 +38,8 @@ You can also run the algorithm in IBM Quantum Platform, but it crashes with N > 
 
 ## Project Structure
 
-shor-algorithm-qiskit/
+```
+ShorAlgorithm/
 │
 ├── README.md
 ├── requirements.txt
@@ -45,6 +52,7 @@ shor-algorithm-qiskit/
 │   └── shor_core.py		Methods for Shor’s algorithm
 └── keys/
     └── ibm_quantum_key.json	Key to call the IBM Quantum Hardware
+```
 
 
 
